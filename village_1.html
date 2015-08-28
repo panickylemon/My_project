@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Земляничные поляны</title>
+	<link type="text/css" rel="stylesheet" href="styles/easy-responsive-tabs.css">
+
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#demoTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion
+				width: 'auto', //auto or any width like 600px
+				fit: true, // 100% fit in a container
+				tabidentify: 'hor_1', // The tab groups identifier
+				activetab_bg: 'white', // background color for active tabs in this group
+				inactive_bg: '#E8E8E8' // background color for inactive tabs in this group
+			});
+		});
+	</script>
+
+	<script type="text/javascript"
+	        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=3nwOYHIZ-_zqZeuB7jfIrvumatVeIB1z&width=auto&height=420&id=mymap">
+	</script>
+	<noscript>
+		<style>
+			.es-carousel ul {
+				display: block;
+			}
+		</style>
+	</noscript>
+	<link rel="stylesheet" type="text/css" href="gallery/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="gallery/css/elastislide.css"/>
+	<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+
+
+
+
+	</script>
+	<script type="text/javascript" src="gallery/js/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="gallery/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="gallery/js/jquery.elastislide.js"></script>
+	<script type="text/javascript" src="gallery/js/gallery.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles/style.css">
+	<link type="text/css" rel="stylesheet" href="styles/village.css">
+
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="styles/ie8.css">
+	<![endif]-->
+
+	<script type="text/javascript" src="http://malsup.github.com/jquery.corner.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$('.box').corner();
+		});
+
+	</script>
+
+	<script type="text/javascript" src="js/IEfix.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="header_layout">
+		<div><a href="index.html"><img src="pictures/logo.png" alt="логотип Амурские зори" class="logo"></a></div>
+
+		<div class="menu">
+			<div class="menu_block">
+				<ul id="navbar">
+					<li>
+						<div><a href="about.html">О компании</a></div>
+					<li>
+						<div><a href="village.html">Посёлки</a></div>
+					<li>
+						<div><a href="selection.html">Подбор участка</a></div>
+					<li>
+						<div><a href="how_buy.html">Как купить</a></div>
+					<li>
+						<div><a href="contacts.html">Контакты</a></div>
+				</ul>
+			</div>
+			<!--<div class="ie_navbar"></div>-->
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="content_village">
+		<div class="content_layout_village">
+
+			<div class="breadcrumbs">
+				<ul>
+					<li><a href="index.html">Амурские зори ></a></li>
+					<li><a href="village.html">Посёлки ></a></li>
+					<li><a href="#">Земляничные поляны</a></li>
+				</ul>
+			</div>
+
+			<h2>Земляничные поляны</h2>
+
+			<div class="place">40 км от города</div>
+			<div class="price">от 250 000 руб. за участок</div>
+
+			<div class="demoTab" id="demoTab">
+				<ul class="resp-tabs-list hor_1">
+					<li> О посёлке</li>
+					<li> Местоположение</li>
+					<li> Схема посёлка</li>
+					<li> Отзывы</li>
+				</ul>
+
+				<div class="resp-tabs-container hor_1">
+					<!--First tab-->
+					<div class="right_left_container_village">
+						<div class="left_block_tab_village">
+							<div id="rg-gallery" class="rg-gallery">
+								<div class="rg-thumbs">
+									<!-- Elastislide Carousel Thumbnail Viewer -->
+									<div class="es-carousel-wrapper">
+										<div class="es-nav">
+											<span class="es-nav-prev">Previous</span>
+											<span class="es-nav-next">Next</span>
+										</div>
+										<div class="es-carousel">
+											<ul>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp1.png"
+														     data-large="gallery/images/zp1.png" alt="image01"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp2.png"
+														     data-large="gallery/images/zp2.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp3.png"
+														     data-large="gallery/images/zp3.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp4.png"
+														     data-large="gallery/images/zp4.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp5.png"
+														     data-large="gallery/images/zp5.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp6.png"
+														     data-large="gallery/images/zp6.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp7.png"
+														     data-large="gallery/images/zp7.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp8.png"
+														     data-large="gallery/images/zp8.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp9.png"
+														     data-large="gallery/images/zp9.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<img src="gallery/images/thumbs/tzp10.png"
+														     data-large="gallery/images/zp10.png" alt="image02"
+														     data-description="Some description"/>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- End Elastislide Carousel Thumbnail Viewer -->
+								</div>
+								<!-- rg-thumbs -->
+							</div>
+						</div>
+
+
+						<div class="right_block_tab_village">
+							<h3>О посёлке «Земляничные поляны»</h3>
+
+							<p>«Земляничные поляны» — это готовый коттеджный поселок в котором уже живут и активно
+								строят свои дома более 120 семей,
+								оптимальный вариант приобретения жилья по экономичной цене. Посёлок сочетает в себе
+								блага цивилизации и умиротворение
+								природы с возможностями для активного отдыха. </p>
+
+							<p>Лес по одной из границ поселения служит естественным барьером, а равнинный ландшафт
+								местности позволит вам
+								воплотить мечты об идеально обустроенном участке.</p>
+
+							<p>Квалифицированные работники управляющей компании следят за состоянием дорог, осуществляют
+								уход за территорией посёлка,
+								держат под контролем инженерные сети, охраняют территорию и осуществляют клининговые
+								услуги.</p>
+
+							<p> Поселок «Земляничные поляны» имеет следующие особенности:</p>
+
+							<div>
+								<ul>
+									<li> 64 га, 310 участков от 6 до 35 соток.</li>
+									<li>40 км от города(40–45 минут езды на автомобиле).</li>
+									<li>10–15 минут до ближайшего посёлка.</li>
+									<li>Дачное некоммерческое партнерство (ДНП).</li>
+									<li>Водоснабжение, газ, электричество от 10 кВт.</li>
+								</ul>
+							</div>
+							<p> Инфраструктура:</p>
+							<ul>
+								<li> контрольно-пропускной пункт (КПП), ограждение территории;</li>
+								<li>централизованное уличное освещение;</li>
+								<li>детские и спортивные площадки;</li>
+								<li>благоустроенная береговая линия;</li>
+								<li>гостевая парковка;</li>
+								<li>благоустроенные рекреационные зоны и прогулочные аллеи;</li>
+								<li>ответственная управляющая компания (УК) и профессиональная служба охраны.</li>
+							</ul>
+
+
+						</div>
+					</div>
+
+
+					<!--Second tab-->
+					<div>
+
+						<div class="map" id="mymap">
+							<div class="map_description">
+								<p>Посёлок «Земляничные поляны» располагается в 40 км от города в Ивановском районе в
+									окружении живописных холмов, лесов и озер.
+
+								<p>Дорога на личном автомобиле от дома до КАД по Новоприозерскому шоссе займет у вас не
+									более 40–45 минут.</p>
+								Неподалёку располагается лесная полоса, богатая ягодами и грибами.</p>
+
+								<p>
+									Любители активного отдыха по достоинству оценят разнообразие фитнес-центров в
+									ближайшем посёлке,
+									а также располагающийся по близости горнолыжный курорт «Сноу Парк».</p>
+
+								Добраться на личном транспорте можно следующим образом: Благовещенск → Ивановка →
+								деревня Дмитриевка → посёлок Березовка → посёлок Петропавловка → коттеджный поселок
+								«Земляничные поляны».</p>
+								<ul>До поселка можно добраться тремя разными путями:
+									<li> на автомобиле;</li>
+									<li> на автобусе;</li>
+									<li> на электричке.</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+
+
+					<!--Third tab-->
+					<div class="third_tab">
+						<img src="pictures/scheme1.jpg">
+					</div>
+
+					<!--Fourth tab-->
+					<div class="fourth_tab">
+						<div class="left_review">
+							<div class="buttom_review"><a href="#">Оставить отзыв</a></div>
+						</div>
+						<div class="right_review">
+							<div class="reviews">
+								<div class="review box">
+									<div>
+										<div class="signature_review">Александр Николаевич, житель участка №24</div>
+										<div class="data_review">12 мая 2015 19:04</div>
+										Приобрел в начале прошлого лета участок в Земляничных полянах. Практически сразу
+										начал строительство.
+										Заложил фундамент. Стоял зиму по всем правилам, до весны. Потеплеет, начну стены
+										возводить.
+										Вкопал столбы и для будущей беседки. Жена проект разрабатывает.
+										Хочу поблагодарить СИТ за своевременную прокладку коммуникаций. Я сам люблю,
+										когда
+										всё идет по плану.
+										Поэтому рад, что сотрудничаю с компанией, для которой обещания тоже не пустой
+										звук.
+									</div>
+								</div>
+
+								<div class="review box">
+									<div>
+										<div class="signature_review">Анна</div>
+										<div class="data_review">04 апреля 2015 13:21</div>
+										В 2015 году в посёлке закончили монтаж насосной и очистной станции, установили
+										детскую площадку,
+										проложили внутрипоселковые пешеходные дорожки, начали и завершили плановый
+										дорожный
+										ремонт в третьей очереди
+										проекта и начали заниматься электричеством: в 1 и 2 очереди проекта уже
+										установлены
+										трансформаторные подстанции.
+										Электрификация поселка продолжается и идет согласно графику, размещенному на
+										сайте
+										проекта.
+										Значит, есть основания полагать, что и в будущем застройщик будет придерживаться
+										плана.
+									</div>
+								</div>
+
+								<div class="review box">
+									<div>
+										<div class="signature_review">Степан, житель участка №141</div>
+										<div class="data_review">26 февраля 2014 9:25</div>
+										Расположение и сам поселок нравятся, пока всем доволен. Сейчас начинаю
+										обустройство.
+										Долго выбирал, какую канализацию установить, в итоге заказал Юнилос, они вроде
+										без
+										запаха и
+										откачивать ассенизатором не нужно.
+										Пока только установили, запускать будем позже как только дом обустроим дом для
+										жизни
+									</div>
+								</div>
+
+								<div class="review box">
+									<div>
+										<div class="signature_review">Татьяна Станиславовна</div>
+										<div class="data_review">7 февраля 2014 17:19</div>
+										Весьма адекватный, достаточно большой поселок. Видно, что за ним следят.
+										По цене один из самых дешёвых из днп в том районе, и по качеству пожалуй один из
+										лидеров.
+										Сейчас рассматриваем разные варианты с ипотекой и рассрочкой. Думаю, что к лету
+										окончательно уже определимся.
+									</div>
+								</div>
+
+								<div class="review box">
+									<div>
+										<div class="signature_review">Андрей Олегович, житель участка №73</div>
+										<div class="data_review">25 января 2014 19:10</div>
+										Лучше один раз увидеть, я вам советую съездить в поселок и окунуться в его
+										уютную
+										атмосферу.
+										Люди строятся, много поселков раскуплено. Вот посмотрите, уезжать не захотите)
+									</div>
+								</div>
+
+								<div class="review box">
+									<div>
+										<div class="signature_review">Георгий, житель участка №64</div>
+										<div class="data_review">19 января 2014 10:01</div>
+										Обустройство поселка идет полным ходом. Я рад, что купил тут участок. Нет ничего
+										лучше надежной компании.
+										Многие знакомые накупили дешевые участки в малоизвестных компаниях, теперь
+										мучаются,
+										потому что их бросили,
+										купили ветер в поле.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="footer_content">
+		<div class="box_footer">
+			<a href="village.html">Выбери свой райский <br>уголок</a>
+		</div>
+		<div class="box_footer">
+			<a href="selection.html">Построй дом своей <br>мечты</a>
+		</div>
+		<div class="box_footer">
+			<a href="contacts.html">Ответим на все Ваши <br>вопросы</a>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
