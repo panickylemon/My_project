@@ -545,54 +545,66 @@ a img {
 
 }
 
-.data_review {
+.date_review {
 	color: #949494;
 	font-size: 13px;
 	padding-bottom: 4px;
 }
 
-.fourth_tab {
-	padding: 0px;
-}
+/*.fourth_tab {*/
+	/*padding: 20px 0px;*/
+/*}*/
 
-.left_review {
-	width: 150px;
-	float: left;
-}
+/*.left_review {*/
+	/*width: 150px;*/
+	/*float: left;*/
+	/*position: relative;*/
+/*height: 100%;*/
+/*}*/
 
-.right_review {margin-top: -110px;
-	padding:0px 50px;
-	float: right;
-}
+/*.right_review {*/
+	/*padding:0px 50px;*/
+	/*float: right;*/
 
-.buttom_review {background-color: #00c6e3;
-	-moz-transform:    rotate(-90deg)
-	translateY(-60px);
-	-o-transform:      rotate(-90deg)
-	translateY(-60px);
-	-webkit-transform: rotate(-90deg)
-	translateY(-60px);
-	transform: rotate(-90deg) translateY(-60px);
-	text-align: center;
-	height: 30px;
-	margin-top: 100px;
-	border: 0px solid red;
-	border-bottom-left-radius:10px;
-	border-bottom-right-radius:10px;
-	-moz-border-radius-bottomleft:10px;
-	-moz-border-radius-bottomright:10px;
-	-webkit-border-bottom-right-radius:10px;
-	-webkit-border-bottom-left-radius:10px;
+	/**/
+/*}*/
 
-}
+/*.buttom_review {background-color: #00c6e3;*/
+	/*-moz-transform:    rotate(-90deg)*/
+	/*translateY(-60px);*/
+	/*-o-transform:      rotate(-90deg)*/
+	/*translateY(-60px);*/
+	/*-webkit-transform: rotate(-90deg)*/
+	/*translateY(-60px);*/
+	/*transform: rotate(-90deg) translateY(-60px);*/
+	/*text-align: center;*/
+	/*height: 30px;*/
+	/*margin-top: 100px;*/
+	/*border: 0px solid red;*/
+	/*border-bottom-left-radius:10px;*/
+	/*border-bottom-right-radius:10px;*/
+	/*-moz-border-radius-bottomleft:10px;*/
+	/*-moz-border-radius-bottomright:10px;*/
+	/*-webkit-border-bottom-right-radius:10px;*/
+	/*-webkit-border-bottom-left-radius:10px;*/
 
-.fourth_tab:after {
-	content: '';
-	clear: both;
-	display: table;
-}
+/*}*/
 
-.buttom_review a{text-decoration: none;
-	color: #525252;}
+/*.buttom_review:hover{background-size: 31px;*/
+/*}*/
 
-.buttom_review:hover{background-color: #00e0ff;}
+/*.buttom_review{background: url("../pictures/buttom2.png") no-repeat;*/
+	/*position: fixed;*/
+	/*height: 148px;*/
+	/*width: 35px;*/
+
+/*}*/
+
+/*.fourth_tab:after {*/
+	/*content: '';*/
+	/*clear: both;*/
+	/*display: table;*/
+/*}*/
+
+
+

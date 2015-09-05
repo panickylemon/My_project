@@ -19,4 +19,7 @@
 .rg-caption p{margin-top: 0px;
 	display: none;}
 
-.resp-tabs-list li{padding: 14px 25px;}
+.resp-tabs-list li{padding: 14px 25px;
+	margin-right: 1px;}
+
+
