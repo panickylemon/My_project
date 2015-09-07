@@ -661,20 +661,21 @@ textarea {
 
 .filter_box {
 	width: 19%;
-	height: 500px;
 	border: 1px solid #9e9897;
 	float: left;
 	box-sizing: border-box;
 	padding: 10px;
+	background: #ffffff;
 }
 
 .result_filter_box {
 	width: 80%;
-	height: 500px;
-	border: 1px solid #cb7c00;
+	height: 700px;
+	border: 1px solid #9e9897;
 	float: right;
 	padding: 5px;
 	box-sizing: border-box;
+	background: #ffffff;
 }
 
 .sorting_box {
@@ -706,3 +707,5 @@ textarea {
 }
 
 .filter_elements {margin-bottom: 15px;}
+
+.sort_group {display: inline-block;}
