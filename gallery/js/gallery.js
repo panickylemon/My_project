@@ -254,7 +254,7 @@ $(function() {
 	/*
 	Example to add more items to the gallery:
 	
-	var $new  = $('<li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
+	var $new  = $('<li><a href="#"><img src="images/thumbs/zp1.png" data-large="images/zp1.png" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
 	Gallery.addItems( $new );
 	*/
 });

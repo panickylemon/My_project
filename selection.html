@@ -4,9 +4,128 @@
 	<meta charset="UTF-8">
 	<title>Подбор участка</title>
 	<link href="styles/style.css" type="text/css" rel="stylesheet">
+	<link href="range/normalize.css" type="text/css" rel="stylesheet">
+	<link href="range/ion.rangeSlider.css" type="text/css" rel="stylesheet">
+	<link href="range/ion.rangeSlider.skinNice.css" type="text/css" rel="stylesheet">
 	<script src="js/jquery-1.11.3.js"></script>
+	<script src="range/ion.rangeSlider.js"></script>
+
+	<script>
+		$(function () {
+
+			$("#range").ionRangeSlider({
+				hide_min_max: true,
+				keyboard: true,
+				min: 100,
+				max: 5000,
+				from: 100,
+				to: 5000,
+				type: 'double',
+				step: 50,
+				grid: true
+
+			});
+
+			$("#range").on("change", function () {
+				var $this = $(this),
+						from = $this.data("from"),
+						to = $this.data("to");
+				$('.size-from').val(from);
+				$('.size-to').val(to);
+			});
+
+		});
+	</script>
 </head>
 <body>
+<div class="header">
+	<div class="header_layout">
+		<div><a href="index.html"><img src="pictures/logo.png" alt="логотип Амурские зори" class="logo"></a></div>
 
+		<div class="menu">
+			<div class="menu_block">
+				<ul id="navbar">
+					<li>
+						<div><a href="about.html">О компании</a></div>
+					<li>
+						<div><a href="village.html">Посёлки</a></div>
+					<li>
+						<div><a href="selection.html">Подбор участка</a></div>
+					<li>
+						<div><a href="how_buy.html">Как купить</a></div>
+					<li>
+						<div><a href="contacts.html">Контакты</a></div>
+				</ul>
+			</div>
+			<!--<div class="ie_navbar"></div>-->
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="content_village">
+		<div class="content_layout_village">
+			<div class="selection_layout">
+				<div class="filter_box">
+					<div class="filter_elements">Посёлки
+						<div class="filter_village">
+							<input type="checkbox" name="village" value="zeml_pol" checked>Земляничные поляны<br>
+							<input type="checkbox" name="village" value="ros_slob">Рощинская слобода<br>
+							<input type="checkbox" name="village" value="medovoe">Медовое<br>
+						</div>
+					</div>
+
+					<div class="filter_elements price_range">Цена, тыс.руб.
+						<input type="text" id="range" value="" name="range">
+						<div class="count_range_box">
+							<input type="number" class ="size-from count_range" value="100">-
+							<input type="number" class="size-to count_range" value="5000">
+						</div>
+					</div>
+
+					<div class="filter_elements">Статус
+						<div class="filter_village">
+							<input type="checkbox" name="status" value="not_for_sale" checked>Продан<br>
+							<input type="checkbox" name="status" value="sale">В продаже<br>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="result_filter_box">
+
+					<div class="sorting_box">
+						<div class="sorting">Сортировать:<br>
+							<select name="">
+								<option value="up">По возрастанию цен</option>
+								<option value="down">По убыванию цен</option>
+							</select>
+						</div>
+						<div class="grouping"></div>
+						<div class="view"></div>
+					</div>
+
+					<div class="result"></div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="footer_content">
+		<div class="box_footer">
+			<a href="village.html">Выбери свой райский <br>уголок</a>
+		</div>
+		<div class="box_footer">
+			<a href="selection.html">Построй дом своей <br>мечты</a>
+		</div>
+		<div class="box_footer">
+			<a href="contacts.html">Ответим на все Ваши <br>вопросы</a>
+		</div>
+
+	</div>
+</div>
 </body>
 </html>
