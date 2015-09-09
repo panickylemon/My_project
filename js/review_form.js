@@ -4,7 +4,7 @@ var name_regexp = /^[a-zA-ZА-Яа-яёЁ-]{2,32}$/i;
 var lastname_regexp = /^[a-zA-ZА-Яа-яёЁ-]*$/i;
 var middlename_regexp = /^[a-zA-ZА-Яа-яёЁ-]{2,32}$/i;
 var locality_regexp = /^[0-9]{1,5}$/i;
-var my_review_regexp = /^[А-Яа-яёЁ-]{10,500}$/i;
+var my_review_regexp = /^[А-Яа-яёЁ-]{10,1500}$/i;
 
 
 //
@@ -15,6 +15,12 @@ var my_review_regexp = /^[А-Яа-яёЁ-]{10,500}$/i;
 var checker = '<span class="checker">&#10004</span>';
 
 $(document).ready(function(){
+
+    if(typeof String.prototype.trim !== 'function') {
+        String.prototype.trim = function() {
+            return this.replace(/^\s+|\s+$/g, '');
+        }
+    }
 
     var validate_firstname = function (check_zero) {
         var elem = $(".firstname");
@@ -46,23 +52,13 @@ $(document).ready(function(){
     };
 
 
-    var validate_middlename = function (check_zero) {
+    var validate_middlename = function () {
         var elem = $(".middlename");
         var value = $(".middlename").val();
         $(".middlename").val(value.trim());
         var string_length = value.trim().length;
         var elem_result = $(".middlename").parent().next();
-        if (check_zero) {
-            if (value.trim().match(name_regexp) == null) {
-                var error_text = $(".middlename_error_text").text();
-                elem_result.html(error_text);
-                elem.addClass("field_incorrect");
-            } else {
-                elem_result.html(checker);
-                elem.removeClass("field_incorrect");
-            }
-        } else {
-            if(string_length != 0) {
+        if(string_length != 0) {
                 if (value.trim().match(name_regexp) == null) {
                     var error_text = $(".middlename_error_text").text();
                     elem_result.html(error_text);
@@ -71,28 +67,20 @@ $(document).ready(function(){
                     elem_result.html(checker);
                     elem.removeClass("field_incorrect");
                 }
-            }
+        } else {
+            elem_result.html("");
+            elem.removeClass("field_incorrect");
         }
     };
 
 
-    var validate_lastname = function (check_zero) {
+    var validate_lastname = function () {
         var elem = $(".lastname");
         var value = $(".lastname").val();
         $(".lastname").val(value.trim());
         var string_length = value.trim().length;
         var elem_result = $(".lastname").parent().next();
-        if (check_zero) {
-            if (value.trim().match(middlename_regexp) == null) {
-                var error_text = $(".lastname_error_text").text();
-                elem_result.html(error_text);
-                elem.addClass("field_incorrect");
-            } else {
-                elem_result.html(checker);
-                elem.removeClass("field_incorrect");
-            }
-        } else {
-            if(string_length != 0) {
+        if(string_length != 0) {
                 if (value.trim().match(lastname_regexp) == null) {
                     var error_text = $(".lastname_error_text").text();
                     elem_result.html(error_text);
@@ -101,9 +89,13 @@ $(document).ready(function(){
                     elem_result.html(checker);
                     elem.removeClass("field_incorrect");
                 }
-            }
+            } else {
+                elem_result.html("");
+                elem.removeClass("field_incorrect");
         }
     };
+
+
 
     var validate_locality = function () {
         var elem = $(".locality");
@@ -112,16 +104,22 @@ $(document).ready(function(){
         var string_length = value.trim().length;
         var elem_result = $(".locality").parent().next();
         if(string_length != 0) {
-            if (value.trim().match(locality_regexp) == null) {
-                var error_text = $(".locality_error_text").text();
-                elem_result.html(error_text);
-                elem.addClass("field_incorrect");
-            } else {
-                elem_result.html(checker);
-                elem.removeClass("field_incorrect");
-            }
+                if (value.trim().match(locality_regexp) == null) {
+                    var error_text = $(".locality_error_text").text();
+                    elem_result.html(error_text);
+                    elem.addClass("field_incorrect");
+                } else {
+                    elem_result.html(checker);
+                    elem.removeClass("field_incorrect");
+                }
+        } else {
+            elem_result.html("");
+            elem.removeClass("field_incorrect");
         }
     };
+
+
+
 
     var validate_my_review = function (check_zero) {
         var elem = $(".my_review");
@@ -166,12 +164,12 @@ $(document).ready(function(){
         validate_locality();
     });
     $(".my_review").on("keyup change", function () {
-        validate_my_review();
+        validate_my_review(true);
     });
 
     validate_firstname(false);
-    validate_middlename(false);
-    validate_lastname(false);
+    validate_middlename();
+    validate_lastname();
     validate_locality();
     validate_my_review(false);
 

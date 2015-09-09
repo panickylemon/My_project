@@ -433,7 +433,7 @@
 
 								<div class="form_line_element">
 									<div class="form_text">№ участка (если являетесь жителем данного посёлка)</div>
-									<div class="form_element"><input type="number" value="" name="locality"
+									<div class="form_element"><input type="number" value="" name="locality" min="1"
 									                                 class="locality"></div>
 									<div class="form_element_result"></div>
 									<div class="locality_error_text form_error_text">
@@ -447,13 +447,13 @@
 									                                    class="my_review field_incorrect"></textarea></div>
 									<div class="form_element_result"></div>
 									<div class="my_review_error_text form_error_text">
-										Введите текст от 10 до 500 символов на кириллице
+										Введите текст от 10 до 1500 символов на кириллице
 									</div>
 								</div>
 
-								<div class="form_line_element form_center">
-									 <input type="submit" value="Отправить">
-									<br>
+								<div class="form_line_element form_center ">
+									 <input class="submit_review" type="submit" value="Отправить">
+
 								</div>
 
 							</form>
