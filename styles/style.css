@@ -436,10 +436,12 @@ body {
 	font-size: 80%;
 	float: left;
 	padding-left: 3px;
+	_overflow:hidden;
 	zoom: 1;
 	*display: inline;
-
 }
+
+
 
 .breadcrumbs:after {
 	content: '';
@@ -800,3 +802,15 @@ textarea {
 
 .main_text_buy a{color: #5f9982;}
 
+/*.ui-state-active {background: #53a5e0;}*/
+.accord_quetions{margin-bottom: 30px;}
+
+.accord_quetions h4{margin: 10px 0px 15px;}
+
+.ui-accordion .ui-accordion-header{padding: 5px 30px;
+font-size: 14px;}
+
+.ui-helper-reset{font-size: 14px;}
+
+.ui-accordion .ui-accordion-content{padding:5px 30px;
+color: #646464;}
